@@ -25,19 +25,16 @@ const App: FC = () => {
 
   return (
     <main style={styles.page}>
-      {/* Logo Siesa fijo ARRIBA–IZQUIERDA */}
-      <img
-        src={LogoSiesa}
-        alt="Siesa"
-        style={styles.logoSiesaFixed}
-      />
+      {/* Logo Siesa fijo arriba-izquierda */}
+      <img src={LogoSiesa} alt="Siesa" style={styles.logoSiesaFixed} />
 
       {/* Contenido centrado */}
       <section style={styles.center}>
+        <h1 style={styles.mainTitle}>Portal Corporativo</h1>
         <img src={LogoEDM} alt="Estudio de Moda" style={styles.logoEDM} />
 
         <div style={styles.form}>
-          <label htmlFor="quicknav" style={styles.label}>Ir a:</label>
+          <label htmlFor="quicknav" style={styles.label}>Selecciona compañía</label>
           <div style={styles.borderGrad}>
             <div style={styles.selectShell}>
               <select
@@ -61,7 +58,7 @@ const App: FC = () => {
   );
 };
 
-const HEADER_PAD = 20; // separación desde el borde
+const PAD = 20;
 
 const styles: Record<string, React.CSSProperties> = {
   page: {
@@ -70,16 +67,15 @@ const styles: Record<string, React.CSSProperties> = {
     background: "#fff",
     color: "#0B2B6A",
     position: "relative",
-    overflow: "hidden",
     display: "grid",
     placeItems: "center",
+    overflow: "hidden",
   },
 
-  // Logo Siesa anclado al viewport (como en tu marca roja)
   logoSiesaFixed: {
     position: "fixed",
-    top: `calc(${HEADER_PAD}px + env(safe-area-inset-top, 0px))`,
-    left: `calc(${HEADER_PAD}px + env(safe-area-inset-left, 0px))`,
+    top: `calc(${PAD}px + env(safe-area-inset-top, 0px))`,
+    left: `calc(${PAD}px + env(safe-area-inset-left, 0px))`,
     height: 36,
     objectFit: "contain",
     zIndex: 5,
@@ -93,6 +89,14 @@ const styles: Record<string, React.CSSProperties> = {
     alignItems: "center",
     textAlign: "center",
     gap: 16,
+  },
+
+  mainTitle: {
+    fontSize: "clamp(22px, 4vw, 28px)",
+    fontWeight: 800,
+    margin: "0 0 8px 0",
+    color: "#0B2B6A",
+    letterSpacing: "-0.02em",
   },
 
   logoEDM: { width: 150, height: "auto", marginBottom: 8 },
@@ -113,20 +117,28 @@ const styles: Record<string, React.CSSProperties> = {
     border: "1px solid #D9E2F1",
   },
   select: {
-    appearance: "none", WebkitAppearance: "none", MozAppearance: "none",
+    appearance: "none",
+    WebkitAppearance: "none",
+    MozAppearance: "none",
     width: "100%",
     height: 50,
     padding: "0 44px 0 14px",
-    border: "none", outline: "none",
+    border: "none",
+    outline: "none",
     borderRadius: 10,
     background: "transparent",
     color: "#0B2B6A",
-    fontSize: 15, fontWeight: 700,
+    fontSize: 15,
+    fontWeight: 700,
   },
   caret: {
-    position: "absolute", right: 14, top: "50%",
+    position: "absolute",
+    right: 14,
+    top: "50%",
     transform: "translateY(-50%)",
-    fontSize: 18, color: "#2D6CF6", pointerEvents: "none",
+    fontSize: 18,
+    color: "#2D6CF6",
+    pointerEvents: "none",
   },
   hint: { color: "#5B6B8C", fontSize: 12 },
 };

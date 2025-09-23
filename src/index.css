@@ -1,0 +1,52 @@
+:root {
+  /* Tipografía y render */
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Fuerza tema claro por defecto */
+  color-scheme: light;
+  color: #0b2b6a;
+  background-color: #ffffff;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Quita el centrado global del body que rompe el full-screen */
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  display: block;
+}
+
+/* Enlaces y foco accesible */
+a {
+  font-weight: 500;
+  color: #2d6cf6;
+  text-decoration: none;
+}
+a:hover { color: #1f57d6; }
+
+/* Botones base (por si usas alguno) */
+button {
+  border-radius: 10px;
+  border: 1px solid #d9e2f1;
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #ffffff;
+  color: #0b2b6a;
+  cursor: pointer;
+  transition: box-shadow .15s ease, border-color .15s ease;
+}
+button:hover { box-shadow: 0 6px 16px rgba(13,71,161,.12); }
+button:focus,
+button:focus-visible { outline: 3px solid #9ec5ff; outline-offset: 2px; }

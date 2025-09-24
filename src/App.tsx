@@ -8,10 +8,10 @@ type LinkItem = { title: string; href: string };
 const LINKS: LinkItem[] = [
   { title: "Estudio de moda",    href: "https://tinyurl.com/mv6b6xca" },
   { title: "DH Retail",          href: "https://tinyurl.com/mv6b6xca" },
-  { title: "DenimHead",          href: "https://tinyurl.com/mv6b6xca" },
+  { title: "Denim Head",          href: "https://tinyurl.com/mv6b6xca" },
   { title: "Expensis",           href: "https://tinyurl.com/mv6b6xca" },
-  { title: "Movimiento visual",  href: "https://tinyurl.com/mv6b6xca" },
-  { title: "Meta graphics",      href: "https://tinyurl.com/mv6b6xca" },
+  { title: "Movimiento Visual",  href: "https://tinyurl.com/mv6b6xca" },
+  { title: "Meta Graphics",      href: "https://tinyurl.com/mv6b6xca" },
 ];
 
 const App: FC = () => {
@@ -25,12 +25,9 @@ const App: FC = () => {
 
   return (
     <main style={styles.page}>
-      {/* Logo Siesa fijo arriba-izquierda */}
-      <img src={LogoSiesa} alt="Siesa" style={styles.logoSiesaFixed} />
-
       {/* Contenido centrado */}
       <section style={styles.center}>
-        <h1 style={styles.mainTitle}>Portal Corporativo</h1>
+        <h1 style={styles.mainTitle}>Portal Autogestión</h1>
         <img src={LogoEDM} alt="Estudio de Moda" style={styles.logoEDM} />
 
         <div style={styles.form}>
@@ -51,14 +48,12 @@ const App: FC = () => {
               <span aria-hidden="true" style={styles.caret}>▾</span>
             </div>
           </div>
-          <small style={styles.hint}>Puedes escribir para filtrar dentro del desplegable.</small>
+            <img src={LogoSiesa} alt="Siesa" style={styles.logoSiesa} />
         </div>
       </section>
     </main>
   );
 };
-
-const PAD = 20;
 
 const styles: Record<string, React.CSSProperties> = {
   page: {
@@ -70,16 +65,6 @@ const styles: Record<string, React.CSSProperties> = {
     display: "grid",
     placeItems: "center",
     overflow: "hidden",
-  },
-
-  logoSiesaFixed: {
-    position: "fixed",
-    top: `calc(${PAD}px + env(safe-area-inset-top, 0px))`,
-    left: `calc(${PAD}px + env(safe-area-inset-left, 0px))`,
-    height: 36,
-    objectFit: "contain",
-    zIndex: 5,
-    userSelect: "none",
   },
 
   center: {
@@ -141,6 +126,19 @@ const styles: Record<string, React.CSSProperties> = {
     pointerEvents: "none",
   },
   hint: { color: "#5B6B8C", fontSize: 12 },
+
+  // Nuevo: logo Siesa debajo del select con ~2 saltos de línea
+  logoSiesa: {
+    height: 72,                 // ajusta si lo quieres un poco más grande
+    width: "auto",
+    objectFit: "contain",
+    userSelect: "none",
+    display: "block",
+    margin: "2em auto 0",       // centra horizontal y da el espacio arriba
+    // alternativa equivalente:
+    // justifySelf: "center",
+  },
 };
+
 
 export default App;

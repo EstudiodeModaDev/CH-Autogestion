@@ -6,12 +6,12 @@ import LogoEDM   from "./assets/LogoEdem.png";
 type LinkItem = { title: string; href: string };
 
 const LINKS: LinkItem[] = [
-  { title: "Estudio de moda",    href: "https://tinyurl.com/mv6b6xca" },
-  { title: "DH Retail",          href: "https://tinyurl.com/mv6b6xca" },
-  { title: "Denim Head",          href: "https://tinyurl.com/mv6b6xca" },
-  { title: "Expensis",           href: "https://tinyurl.com/mv6b6xca" },
-  { title: "Movimiento Visual",  href: "https://tinyurl.com/mv6b6xca" },
-  { title: "Meta Graphics",      href: "https://tinyurl.com/mv6b6xca" },
+  { title: "Estudio de moda",    href: "http://10.10.21.7:8900/AuthAG/LoginFormAG?IdCia=1&NroConexion=1" },
+  { title: "DH Retail",          href: "http://10.10.21.7:8900/AuthAG/LoginFormAG?IdCia=11&NroConexion=1" },
+  { title: "Denim Head",          href: "http://10.10.21.7:8900/AuthAG/LoginFormAG?IdCia=9&NroConexion=1" },
+  { title: "Expensis",           href: "http://10.10.21.7:8900/AuthAG/LoginFormAG?IdCia=10&NroConexion=1" },
+  { title: "Movimiento Visual",  href: "http://10.10.21.7:8900/AuthAG/LoginFormAG?IdCia=12&NroConexion=1" },
+  { title: "Meta Graphics",      href: "http://10.10.21.7:8900/AuthAG/LoginFormAG?IdCia=12&NroConexion=1" },
 ];
 
 const App: FC = () => {
@@ -86,7 +86,7 @@ const styles: Record<string, React.CSSProperties> = {
 
   logoEDM: { width: 150, height: "auto", marginBottom: 8 },
 
-  form: { width: "100%", display: "grid", gap: 10 },
+  form: { width: "100%", display: "grid", gap: 10, justifyItems: "center" },
   label: { fontSize: 14, fontWeight: 800, letterSpacing: ".06em" },
 
   borderGrad: {
@@ -94,12 +94,15 @@ const styles: Record<string, React.CSSProperties> = {
     borderRadius: 12,
     background: "linear-gradient(135deg, #2D6CF6, #4CC2FF)",
     boxShadow: "0 12px 36px rgba(13,71,161,0.10)",
+     width: "min(520px, 90vw)",
+     margin: "0 auto",
   },
   selectShell: {
     position: "relative",
     borderRadius: 10,
     background: "#fff",
     border: "1px solid #D9E2F1",
+    width: "100%",
   },
   select: {
     appearance: "none",

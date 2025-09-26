@@ -11,7 +11,7 @@ const LINKS: LinkItem[] = [
   { title: "Denim Head",          href: "http://10.10.21.7:8900/AuthAG/LoginFormAG?IdCia=9&NroConexion=1" },
   { title: "Expensis",           href: "http://10.10.21.7:8900/AuthAG/LoginFormAG?IdCia=10&NroConexion=1" },
   { title: "Movimiento Visual",  href: "http://10.10.21.7:8900/AuthAG/LoginFormAG?IdCia=12&NroConexion=1" },
-  { title: "Meta Graphics",      href: "http://10.10.21.7:8900/AuthAG/LoginFormAG?IdCia=12&NroConexion=1" },
+  { title: "Meta Graphics",      href: "http://10.10.21.7:8900/AuthAG/LoginFormAG?IdCia=13&NroConexion=1" },
 ];
 
 const App: FC = () => {
